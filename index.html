@@ -22,16 +22,17 @@
     }
     header img {
       border-radius: 50%;
-      width: 120px;
-      height: 120px;
+      width: 240px;      /* Increased size */
+      height: 240px;     /* Increased size */
       margin-bottom: 1rem;
-      border: 4px solid #fff;
-      box-shadow: 0 2px 8px rgba(55,90,127,0.18);
+      border: 6px solid #fff;
+      box-shadow: 0 2px 16px rgba(55,90,127,0.20);
       background: #fff;
       object-fit: cover;
+      max-width: 90vw;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.7rem;
       margin: 0 0 0.5rem;
       font-weight: 700;
       letter-spacing: 1px;
@@ -110,6 +111,7 @@
       text-shadow: 0 2px 12px rgba(78,84,200,0.13);
     }
     @media (max-width: 700px) {
+      header img { width: 120px; height: 120px; }
       .cards { flex-direction: column; gap: 1.2rem; }
       main { padding: 1rem; }
     }
@@ -118,15 +120,15 @@
 <body>
   <header>
     <!-- Profile image using the correct folder and file name -->
-    <img src="images/AlpsLake.jpg" alt="Kevrob1302 profile picture" />
-    <h1>Keevrob1302</h1>
+    <img src="images/AlpsLake.jpg" alt="Kevin Robertson profile picture" />
+    <h1>Kevin Robertson</h1>
     <p style="color:#f0f0f0;font-size:1.2rem;">Developer • Creator • Problem Solver</p>
   </header>
   <main>
     <section class="cards">
       <div class="card">
         <h2>About Me</h2>
-        <p>Hello! I'm Kevrob1302, passionate about technology and learning. I enjoy building projects, collaborating with others, and sharing knowledge.</p>
+        <p>Hello! I'm Kevin Robertson, passionate about technology and learning. I enjoy building projects, collaborating with others, and sharing knowledge.</p>
       </div>
       <div class="card">
         <h2>Projects</h2>
@@ -156,7 +158,7 @@
     </section>
   </main>
   <footer>
-    &copy; 2025 Kevrob1302 &mdash; Powered by GitHub Pages
+    &copy; 2025 Kevin Robertson &mdash; Powered by GitHub Pages
   </footer>
 </body>
 </html>
