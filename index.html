@@ -1,164 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kevin Robertson | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Kevin Robertson Resume</title>
   <style>
     body {
-      font-family: 'Montserrat', Arial, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
+      padding: 0;
       color: #222;
+      background: linear-gradient(135deg, #e0ecff 0%, #f8f6ff 50%, #ffe3e3 100%);
       min-height: 100vh;
-      /* Gradient background */
-      background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
-      display: flex;
-      flex-direction: column;
     }
-    header {
+    .container {
+      max-width: 760px;
+      background: rgba(255,255,255,0.95);
+      margin: 48px auto 32px auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 48px rgba(34, 34, 34, 0.13);
+      padding: 38px 46px 30px 46px;
+    }
+    .header {
       text-align: center;
-      padding: 2rem 0 1rem;
+      margin-bottom: 28px;
     }
-    header img {
+    .picture {
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
-      width: 240px;      /* Increased size */
-      height: 240px;     /* Increased size */
-      margin-bottom: 1rem;
-      border: 6px solid #fff;
-      box-shadow: 0 2px 16px rgba(55,90,127,0.20);
-      background: #fff;
       object-fit: cover;
-      max-width: 90vw;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 12px rgba(33,150,243,0.14);
+      border: 3px solid #90caf9;
     }
     h1 {
-      font-size: 2.7rem;
-      margin: 0 0 0.5rem;
+      font-size: 2.2em;
       font-weight: 700;
+      margin-bottom: 8px;
       letter-spacing: 1px;
-      color: #fff;
-      text-shadow: 0 2px 20px rgba(78,84,200,0.15);
+      background: linear-gradient(90deg, #2196f3 60%, #f48fb1 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
-    h2 {
-      color: #4e54c8;
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
+    .section {
+      margin-bottom: 26px;
+    }
+    .section-title {
+      font-size: 1.14em;
       font-weight: 700;
+      color: #2196f3;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    main {
-      max-width: 900px;
-      width: 95%;
-      margin: 2rem auto;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+    ul, .resume-list {
+      margin: 0;
+      padding-left: 20px;
+      list-style: disc;
     }
-    .cards {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
+    .project-placeholder {
+      margin: 16px 0;
+      text-align: left;
     }
-    .card {
-      background: rgba(255,255,255,0.78);
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(78,84,200,0.18);
-      padding: 2rem 1.5rem;
-      min-width: 240px;
-      flex: 1 1 260px;
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255,255,255,0.25);
-      transition: transform 0.2s;
+    #colorButton {
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      background: #90caf9;
+      color: #222;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 1px 6px rgba(33,150,243,0.10);
     }
-    .card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(78,84,200,0.23);
-    }
-    .card ul {
-      padding-left: 1.2rem;
-    }
+    #colorButton.clicked { background: #81c784; color: #fff; }
+    #colorButton.clicked2 { background: #f48fb1; color: #fff; }
+    #colorButton.clicked3 { background: #ffd54f; color: #222; }
     .contact {
       text-align: center;
-      margin-top: 1rem;
-    }
-    .button {
-      display: inline-block;
-      background: linear-gradient(135deg, #4e54c8, #8f94fb);
-      color: #fff;
-      padding: 0.7rem 2rem;
-      border-radius: 24px;
-      text-decoration: none;
-      font-weight: 700;
-      box-shadow: 0 2px 8px rgba(78,84,200,0.14);
-      margin: 0.5rem;
-      transition: background 0.2s, transform 0.2s;
-      border: none;
-    }
-    .button:hover {
-      background: linear-gradient(135deg, #3b4099, #757ae0);
-      transform: scale(1.07);
-    }
-    footer {
-      text-align: center;
-      color: #fff;
-      padding: 1.5rem 0;
-      background: rgba(78,84,200,0.2);
-      border-top: 1px solid rgba(255,255,255,0.18);
-      margin-top: auto;
-      font-size: 1rem;
+      margin-top: 36px;
+      padding-top: 16px;
+      border-top: 1px solid #e0e0e0;
+      font-size: 1.08em;
+      color: #2196f3;
       letter-spacing: 1px;
-      text-shadow: 0 2px 12px rgba(78,84,200,0.13);
+      font-weight: 600;
     }
-    @media (max-width: 700px) {
-      header img { width: 120px; height: 120px; }
-      .cards { flex-direction: column; gap: 1.2rem; }
-      main { padding: 1rem; }
+    @media (max-width: 600px) {
+      .container { padding: 18px 5px; }
+      h1 { font-size: 1.2em; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <!-- Profile image using the correct folder and file name -->
-    <img src="images/AlpsLake.jpg" alt="Kevin Robertson profile picture" />
-    <h1>Kevin Robertson</h1>
-    <p style="color:#f0f0f0;font-size:1.2rem;">Developer • Creator • Problem Solver</p>
-  </header>
-  <main>
-    <section class="cards">
-      <div class="card">
-        <h2>About Me</h2>
-        <p>Hello! I'm Kevin Robertson, passionate about technology and learning. I enjoy building projects, collaborating with others, and sharing knowledge.</p>
+  <div class="container">
+    <div class="header">
+      <!-- Replace src with your picture URL if available -->
+      <img class="picture" src="https://avatars.githubusercontent.com/u/15182492?v=4" alt="Kevin Robertson">
+      <h1>Kevin Robertson</h1>
+    </div>
+    <div class="section">
+      <div class="section-title">About Me</div>
+      <p>
+        I am an adaptable and dedicated developer and athlete, recognized for clear communication, creative problem solving, and a strong commitment to personal goals. My experience spans application development, database design, and machine learning, with proven ability to master new concepts quickly. I have been actively involved in both academic and athletic pursuits, earning multiple national medals, academic honors, and contributing to AI development teams. My approach combines technical innovation, analytical thinking, and leadership, demonstrated through hands-on robotics, predictive analytics, and freelance work supporting advanced AI systems.
+      </p>
+    </div>
+    <div class="section">
+      <div class="section-title">Interactive Projects</div>
+      <div class="project-placeholder">
+        <button id="colorButton" onclick="cycleColor()">Click Me!</button>
+        <span style="margin-left:12px;color:#888;">(Button changes color when clicked)</span>
       </div>
-      <div class="card">
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/Kevrob1302/some-project" target="_blank">Some Project</a>
-          </li>
-          <li>
-            <a href="https://github.com/Kevrob1302" target="_blank">My GitHub Profile</a>
-          </li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Skills</h2>
-        <ul>
-          <li>JavaScript, Python, HTML/CSS</li>
-          <li>Git & GitHub</li>
-          <li>Web Development</li>
-          <li>Problem Solving</li>
-        </ul>
-      </div>
-    </section>
-    <section class="contact">
-      <h2>Contact</h2>
-      <a class="button" href="mailto:your-email@example.com">Email Me</a>
-      <a class="button" href="https://github.com/Kevrob1302" target="_blank">GitHub</a>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 Kevin Robertson &mdash; Powered by GitHub Pages
-  </footer>
+    </div>
+    <div class="section">
+      <div class="section-title">Education</div>
+      <strong>Syracuse University, Syracuse, NY</strong><br>
+      Bachelor of Computer Engineering and Master of Business Administration (Dual Major), May 2024<br>
+      <ul>
+        <li>Merit-Based Academic Scholarship</li>
+        <li>Dean’s List Recipient</li>
+        <li>2x All-Academic Athlete, NCAA Division I Men's Track & Field</li>
+      </ul>
+    </div>
+    <div class="section">
+      <div class="section-title">Project Experience</div>
+      <ul class="resume-list">
+        <li><strong>Business Marketing</strong> (Apr 2024): Developed an online marketing strategy for a local business using consumer analysis and A/B testing.</li>
+        <li><strong>Olympic Predictions</strong> (Dec 2023): Predicted medal-winning countries for the 2024 Paris Olympics using historical data and machine learning.</li>
+        <li><strong>Senior Design Robotics Project</strong> (May 2023): Built and programmed a robot to recreate images by drawing on a surface with Arduino and Raspberry Pi; presented at a conference.</li>
+        <li><strong>Machine Learning Object Classification</strong> (Dec 2022): Trained algorithms to classify objects using visual data from a digital camera, achieving over 90% accuracy.</li>
+        <li><strong>SQL Database Management</strong> (Oct 2022): Built a secure HR database with 21 tables, implementing views, functions, triggers, and scripts.</li>
+        <li><strong>Business Analysis</strong> (Oct 2022): Cleaned and analyzed large datasets to create a 20-page report with visualizations and management recommendations.</li>
+        <li><strong>Ethical Hacking</strong> (Sep 2021): Exploited vulnerabilities such as SQL injection in virtual machines for a security course.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <div class="section-title">Work Experience</div>
+      <strong>Freelance Developer – DataAnnotation</strong><br>
+      Part-Time, Remote | Aug 2024 – Present
+      <ul>
+        <li>Assisted AI development teams in improving machine learning models by evaluating and generating high-quality code outputs.</li>
+        <li>Wrote, reviewed, and corrected programs, functions, and technical explanations for advanced AI systems.</li>
+        <li>Provided technical insights and feedback to refine model understanding of programming concepts and best practices.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <ul class="resume-list">
+        <li>Adept at mastering new concepts, problem solving, and clear communication</li>
+        <li>C, C++, C#, R, Java, JavaScript, Python, HTML/CSS, SQL, .NET, Batch</li>
+        <li>Object-oriented programming, Database Management Systems, Data visualization</li>
+        <li>Pandas, NumPy, Scikit-Learn, Matplotlib</li>
+        <li>Visual Studio, Eclipse, Jupyter Notebook, IDLE, Thonny, jGRASP, Replit, GitHub</li>
+        <li>Excel, Word, PowerPoint, Canva</li>
+      </ul>
+    </div>
+    <div class="section">
+      <div class="section-title">Awards & Honors</div>
+      <ul class="resume-list">
+        <li>Provisional nominee to Canadian 2024 Olympic Track & Field team</li>
+        <li>4x Canadian National Medalist</li>
+        <li>2x Member of Canadian National Team</li>
+        <li>NACAC U23 Steeplechase Gold Medalist, Costa Rica</li>
+        <li>NCAA Division I Men's Track & Field 2nd Team All American</li>
+      </ul>
+    </div>
+    <div class="contact">
+      ✉️ <a href="mailto:kevrob1302@gmail.com">kevrob1302@gmail.com</a>
+    </div>
+  </div>
+  <script>
+    let state = 0;
+    function cycleColor() {
+      const btn = document.getElementById('colorButton');
+      state = (state + 1) % 4;
+      btn.classList.remove('clicked', 'clicked2', 'clicked3');
+      if (state === 1) btn.classList.add('clicked');
+      else if (state === 2) btn.classList.add('clicked2');
+      else if (state === 3) btn.classList.add('clicked3');
+    }
+  </script>
 </body>
 </html>
