@@ -10,10 +10,10 @@
       padding: 0;
       color: #222;
       background-image: url('images/Background2.jpg');
-      background-size: cover;         /* Makes the image cover the whole background */
-      background-repeat: repeat-y;         /* Repeat vertically (y-axis) */
-      background-position: left top;       /* Start tiling from the top left (optional, default is top left) */
-      background-size: contain;               /* Default, or set to a specific width for scaling */
+      background-size: cover;
+      background-repeat: repeat-y;
+      background-position: left top;
+      background-size: contain;
     }
     .container {
       max-width: 760px;
@@ -92,9 +92,38 @@
       letter-spacing: 1px;
       font-weight: 600;
     }
+    /* Additional styles for video and buttons */
+    .demo-video {
+      background: #111;
+      margin-bottom: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(33,150,243,0.09);
+      max-width: 100%;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.75em 1.5em;
+      background: #4cc9f0;
+      color: #222;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .download-btn:hover { background: #4895ef; }
+    .note { font-size: 0.95em; color: #888; margin-top: 0.5em; }
+    .skategame-section {
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
     @media (max-width: 600px) {
       .container { padding: 18px 5px; }
       h1 { font-size: 1.2em; }
+      video.demo-video { width: 100% !important; height: auto !important; }
     }
   </style>
 </head>
@@ -104,18 +133,42 @@
       <!-- Replace src with your picture URL if available -->
       <img class="picture" src=images/AlpsLake.jpg alt="Kevin Robertson">
       <h1>Kevin Robertson</h1>
+      <div style="font-size:1.08em; color:#2196f3; font-weight:600; margin-top:6px;">
+        Montreal, Quebec
+      </div>
+      <div style="font-size:1.02em; color:#333; font-weight:500; margin-top:2px;">
+        Bachelor of Computer Engineering
+      </div>
+      <div style="font-size:1.02em; color:#333; font-weight:500; margin-top:2px;">
+        MBA with concentration in Finance
+      </div>
+      <div style="font-size:1.02em; color:#333; font-weight:500; margin-top:2px;">
+        Syracuse University | May 2024
+      </div>
     </div>
     <div class="section">
       <div class="section-title">About Me</div>
       <p>
-        I am an adaptable and dedicated developer and athlete, recognized for clear communication, creative problem solving, and a strong commitment to personal goals. My experience spans application development, database design, and machine learning, with proven ability to master new concepts quickly. I have been actively involved in both academic and athletic pursuits, earning multiple national medals, academic honors, and contributing to AI development teams. My approach combines technical innovation, analytical thinking, and leadership, demonstrated through hands-on robotics, predictive analytics, and freelance work supporting advanced AI systems.
+        Based in Montreal, I am a dual-degree graduate with a Bachelor of Computer Engineering and a Master of Business Administration with a concentration in Finance from Syracuse University. My background combines technical expertise in application development, database design, and machine learning with strong business acumen. I am recognized for clear communication, creative problem solving, and a commitment to personal and professional growth. My experience includes hands-on robotics, predictive analytics, and supporting advanced AI systems, alongside achievements in both academic and athletic pursuits.
       </p>
     </div>
     <div class="section">
       <div class="section-title">Interactive Projects</div>
-      <div class="project-placeholder">
-        <button id="colorButton" onclick="cycleColor()">Click Me!</button>
-        <span style="margin-left:12px;color:#888;">(Button changes color when clicked)</span>
+      <!-- Skate Game Demo Addition -->
+      <div class="skategame-section">
+        <h3>Skate Game</h3>
+        <video class="demo-video" width="640" height="360" controls>
+          <source src="SkateGameDemo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <br>
+        <a href="SkateGame.zip" download class="download-btn">
+          Download and Play SkateGame (Windows)
+        </a>
+        <div class="note">
+          <strong>Note:</strong> This download is for Windows only.<br>
+          To play, click the link above, unzip the file (SkateGame.zip), and then run SkateGame.exe
+        </div>
       </div>
     </div>
     <div class="section">
@@ -172,7 +225,8 @@
       </ul>
     </div>
     <div class="contact">
-      ✉️ <a href="mailto:kevrob1302@gmail.com">kevrob1302@gmail.com</a>
+      ✉️ <a href="mailto:kevrob1302@gmail.com">kevrob1302@gmail.com</a><br>
+      <a href="https://www.linkedin.com/in/kevin-robertson-799386261" target="_blank">LinkedIn: Kevin Robertson</a>
     </div>
   </div>
   <script>

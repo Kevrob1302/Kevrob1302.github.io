@@ -1,0 +1,15 @@
+Welcome to my game. Below are the ways you can interact with it.
+
+*Interaction:
+*        up arrow or p - push/accelerate
+*        down arrow or b - tail drag/break
+*        right arrow - turn to the right
+*        left arrow - turn to the left
+*        r - reset to standing in the center facing 0 degrees.
+*        s - shuvit
+*        3 - 360 shuvit
+*        o - ollie
+*        k - kickflip
+*        t - tre flip
+*        right click - change board color
+*        click example boards - change board color
